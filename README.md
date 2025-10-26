@@ -51,7 +51,9 @@
  
 - [ ] Kubernetes
  
-- [ ] Git
+- [x] Git
+
+- [x] Github
  
 - [ ] Mongodb
  
