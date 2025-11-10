@@ -2694,7 +2694,7 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
 
 
 #cv_skills {
-  padding: 10px;
+  padding: 40px;
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   direction: ltr;
@@ -2714,9 +2714,9 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 670px) {
   .skills_container {
     justify-content: center; /* وسط‌چین بشه در گوشی */
   }
@@ -2727,7 +2727,7 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
   width: 250px;
-  padding:0px;
+  padding: 0px;
   transition: 0.4s ease;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
