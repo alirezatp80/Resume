@@ -148,4 +148,31 @@ jQuery(document).ready(function($){
 		$oldWord.removeClass('is-visible').addClass('is-hidden');
 		$newWord.removeClass('is-hidden').addClass('is-visible');
 	}
-});
+	// ==========================
+  // انیمیشن نوار مهارت‌ها 💙
+  // ==========================
+  $('.progress_bar').each(function(){
+    var $bar = $(this);
+    var percent = parseInt($bar.data('skill'), 10);
+    var $fill = $bar.find('.progress_fill');
+    var $text = $bar.find('.progress_text');
+
+    // مقدار اولیه
+    $fill.css('width', '0%');
+    $text.text('0%');
+
+    // انیمیشن پر شدن
+    setTimeout(function(){
+      $fill.animate(
+        { width: percent + '%' },
+        {
+          duration: 1000,
+          step: function(now) {
+            $text.text(Math.floor(now) + '%');
+          }
+        }
+      );
+    }, 300);
+  });
+
+}); 
