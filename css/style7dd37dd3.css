@@ -2716,6 +2716,11 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
   justify-content: flex-end;
   gap: 10px;
 }
+@media (max-width: 768px) {
+  .skills_container {
+    justify-content: center; /* وسط‌چین بشه در گوشی */
+  }
+}
 
 .skill {
   background: rgba(255, 255, 255, 0.06);
