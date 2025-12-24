@@ -311,8 +311,9 @@
   </div>
 
   <div class="skill_projects">
-	<p style="height: 40px;">This Skill has no Project</p>
-  </div>
+  <a href="#python_projects_modal" class="project_btn python_modal_open">پروژه‌ها</a>
+
+</div>
 
   <div class="skill_level">
     <div class="progress_bar" data-skill="100">
@@ -340,9 +341,7 @@ Callback Queryها و ارتباط با دیتابیس.
   </div>
 
   <div class="skill_projects">
-  <a href="#bot_projects" class="project_btn fn_modal_open" >
-    پروژه‌ها
-  </a>
+  <a href="#bot_projects_modal" class="project_btn bot_modal_open">پروژه‌ها</a>
 </div>
 
   <div class="skill_level">
@@ -418,6 +417,26 @@ Callback Queryها و ارتباط با دیتابیس.
           </a>
 		  <p>پیش بینی وضعیت هواشناسی بر اساس لوکیشن</p>
         </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Python Projects -->
+<div id="python_projects_modal" class="custom_modal">
+  <div class="modal_overlay"></div>
+  <div class="modal_inner">
+    <button class="modal_close">&times;</button>
+    <div class="modal_title"><h3>پروژه‌های Python</h3></div>
+    <div class="modal_body">
+      <ul class="project_list">
+        <li>
+          <a href="https://github.com/alirezatp80/Scrapping_gold_coin_dollor" target="_blank">
+            🐍 پروژه وب اسکرپینگ
+          </a>
+          <p>استخراج قیمت انواع ارز،طلا و سکه ، و نفت</p>
+        </li>
+       
       </ul>
     </div>
   </div>
@@ -551,35 +570,52 @@ Callback Queryها و ارتباط با دیتابیس.
 </style>
 
 <script>
-// گرفتن المان‌ها
-const modal = document.getElementById('bot_projects_modal');
-const openBtns = document.querySelectorAll('.project_btn.fn_modal_open');
-const closeBtn = modal.querySelector('.modal_close');
-const overlay = modal.querySelector('.modal_overlay');
+// ===== MODAL Bot =====
+const botModal = document.getElementById('bot_projects_modal');
+const botOpenBtns = document.querySelectorAll('.bot_modal_open');
+const botCloseBtn = botModal.querySelector('.modal_close');
+const botOverlay = botModal.querySelector('.modal_overlay');
 
-// باز کردن مودال با هر دکمه
-openBtns.forEach(btn => {
+botOpenBtns.forEach(btn => {
   btn.addEventListener('click', e => {
     e.preventDefault();
-    modal.classList.add('active');
-    modal.style.display = 'block';
+    botModal.classList.add('active');
+    botModal.style.display = 'block';
   });
 });
 
-// بستن مودال با ضربدر
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-  setTimeout(() => {
-    modal.style.display = 'none';
-  }, 300); // صبر می‌کنه تا انیمیشن تموم بشه
+botCloseBtn.addEventListener('click', () => {
+  botModal.classList.remove('active');
+  setTimeout(() => botModal.style.display = 'none', 300);
 });
 
-// بستن مودال با کلیک روی بک‌گراند
-overlay.addEventListener('click', () => {
-  modal.classList.remove('active');
-  setTimeout(() => {
-    modal.style.display = 'none';
-  }, 300);
+botOverlay.addEventListener('click', () => {
+  botModal.classList.remove('active');
+  setTimeout(() => botModal.style.display = 'none', 300);
+});
+
+// ===== MODAL Python =====
+const pythonModal = document.getElementById('python_projects_modal');
+const pythonOpenBtns = document.querySelectorAll('.python_modal_open');
+const pythonCloseBtn = pythonModal.querySelector('.modal_close');
+const pythonOverlay = pythonModal.querySelector('.modal_overlay');
+
+pythonOpenBtns.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    pythonModal.classList.add('active');
+    pythonModal.style.display = 'block';
+  });
+});
+
+pythonCloseBtn.addEventListener('click', () => {
+  pythonModal.classList.remove('active');
+  setTimeout(() => pythonModal.style.display = 'none', 300);
+});
+
+pythonOverlay.addEventListener('click', () => {
+  pythonModal.classList.remove('active');
+  setTimeout(() => pythonModal.style.display = 'none', 300);
 });
 </script>
 
